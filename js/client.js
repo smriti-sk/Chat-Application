@@ -15,7 +15,7 @@ const append = (message, position)=>{
 form.addEventListener('submit', (e) => {
     e.preventDefault();
     const message = messageInput.value;
-    append(`You: ${message}`)
+    append(`You: ${message}`, 'right')
     socket.emit('send', message)
     messageInput.value = '';
 })
